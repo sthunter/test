@@ -1,0 +1,18 @@
+<div class="container">
+  <h1 class="title">
+    Results
+  </h1>
+  <div class="results">
+    <div class="score">
+      {{results.correct}} / {{results.correct + results.incorrect}}
+    </div>
+    <div class="skipped">
+      {{ results.skipped}}
+    </div>
+    <div class="answers">
+      <div class="answer" *ngFor="let answer of answers">
+
+      </div>
+    </div>
+  </div>
+</div>

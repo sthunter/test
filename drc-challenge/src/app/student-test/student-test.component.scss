@@ -1,0 +1,67 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+.title {
+  color: $primary-color;
+  font-size: 48px;
+  line-height: 110%;
+  letter-spacing: 0.01em;
+
+  // would be a mixing for changing mobile breakpoints globally
+  @media screen and (max-width: 400px) {
+    font-size: 32px;
+  }
+}
+
+.test {
+  max-width: 800px;
+}
+
+.question {
+  display: flex;
+  flex-flow: column nowrap;
+  
+  &__main {
+    font-size: 24px;
+    margin: 20px 0;
+  }
+
+  &__num {
+    margin-right: 15px;
+  }
+
+  &__text {
+    // placeholder for future styling updates
+  }
+}
+
+.answers {
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+}
+
+.answer {
+  display: flex;
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+
+  &__button {
+    background: $secondary-color;
+    color: $drc-white;
+    font-size: 16px;
+    border-radius: 5px;
+
+    &:hover {
+      font-weight: bold;
+    }
+  }
+}
+
+
+
+
+

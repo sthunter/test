@@ -1,0 +1,25 @@
+<div class="container">
+  <h1 class="title">
+    {{test.title}}
+  </h1>
+  <div class="test">
+    <div class="question" *ngFor="let question of questions">
+      <div class="question__main">
+        <span class="question__num">{{question.number}}. </span>
+        <span class="question__text">{{question.text}}</span>
+      </div>
+      <div class="answers">
+        <div class="answer" *ngFor="let answer of question.answers">
+          <input type="radio" [checked]="responses[question.number].answer === answer.letter" (click)="setAnswer(answer, question.text, question.number)"/>
+          <span class="answer__letter">{{answer.letter}}. </span>
+          <span class="answer__text">{{answer.text}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="submit">
+    <button (click)="submitTest" class="submit__button">
+      Sumbit
+    </button>
+  </div>
+</div>
